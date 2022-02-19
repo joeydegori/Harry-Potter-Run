@@ -1,0 +1,20 @@
+.canvas-container{
+    position: relative;
+    width: 500px;
+    height: 500px;
+  }
+
+  #canvas {
+      position: relative; 
+  }
+
+  #start-button {
+      position: absolute;
+      left: 30%; 
+      top: 40%; 
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+}
