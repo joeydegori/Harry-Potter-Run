@@ -5,6 +5,7 @@ class Game {
         this.forest.src = './images/forest.png';
         this.i = 0; 
         this.j = canvas.width; 
+        this.harry = new Character(this.context); 
     }
 
     drawBackground = () => {
@@ -29,11 +30,12 @@ class Game {
         //frame
         let animation = requestAnimationFrame(this.drawEverything);
         this.drawBackground();
+        this.harry.drawSprite(); 
 
 
     }
 
-    //comment
+    
 }
 
  
