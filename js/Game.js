@@ -6,6 +6,10 @@ class Game {
         this.i = 0; 
         this.j = canvas.width; 
         this.harry = new Character(this.context); 
+        this.harry = new Character(this.context); 
+        this.gameFrame = 0; 
+        this.playerFrame = 0; 
+
     }
 
     drawBackground = () => {
@@ -28,9 +32,23 @@ class Game {
 
     drawEverything = () => {
         //frame
+        
         let animation = requestAnimationFrame(this.drawEverything);
         this.drawBackground();
         this.harry.drawSprite(); 
+        // this.harry.animation();
+
+        // if (this.gameFrame % 10 === 0){
+        //     this.sx+= this.sWidth
+        // //     // this.playerFrame; 
+        // //     // this.sx = this.playerFrame % 100; 
+        // }
+
+        this.gameFrame++; 
+
+
+
+
 
 
     }
