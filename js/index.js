@@ -10,10 +10,11 @@ window.onload = () => {
       const game = new Game(context)
       game.drawEverything(); 
   
-        document.addEventListener('keydown', event => {
-        game.character.controls(event.code)
-      })
+        // document.addEventListener('keydown', event => {
+        //       game.character.controls(event.code)
+        // })
     }
-}
+  }
+
   
   

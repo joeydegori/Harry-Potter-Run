@@ -8,7 +8,8 @@ class Game {
         this.harry = new Character(this.context); 
         this.harry = new Character(this.context); 
         this.gameFrame = 0; 
-        this.playerFrame = 0; 
+        this.playerFrame = 0;
+        this.playerDirection = 'right';  
 
     }
 
@@ -36,17 +37,23 @@ class Game {
         let animation = requestAnimationFrame(this.drawEverything);
         this.drawBackground();
         this.harry.drawSprite(); 
+        this.harry.move(); 
         // this.harry.animation();
 
-        // if (this.gameFrame % 10 === 0){
-        //     this.sx+= this.sWidth
-        // //     // this.playerFrame; 
-        // //     // this.sx = this.playerFrame % 100; 
-        // }
+        if (this.gameFrame % 20 === 0){
+            this.playerFrame++ 
+            this.harry.sx = this.playerFrame % 6; 
+            this.harry.sy = Math.floor((this.playerFrame / 6) % 1)
+        }
 
         this.gameFrame++; 
 
 
+        // document.addEventListener('keydown', (event) => {
+        //     if (event.code === 'ArrowRight'){
+        //           this.playerDirection === 'Right'; 
+        //    }
+        // })
 
 
 
