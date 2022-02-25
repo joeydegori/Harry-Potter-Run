@@ -7,9 +7,12 @@ class Game {
         this.j = canvas.width; 
         this.harry = new Character(this.context); 
         this.harry = new Character(this.context); 
+        this.dementor = new Obstacle(this.context); 
+
         this.gameFrame = 0; 
         this.playerFrame = 0;
         this.playerDirection = 'right';  
+
 
     }
 
@@ -37,7 +40,16 @@ class Game {
         let animation = requestAnimationFrame(this.drawEverything);
         this.drawBackground();
         this.harry.drawSprite(); 
-        this.harry.move(); 
+        this.harry.move();
+        // this.obstacles.forEach((obstacle, idx) => {
+        //     obstacle.drawObstacle();
+        //     obstacle.moveObstacle();
+        //     this.checkCollision(obstacle, idx, gameId);
+        //     this.handleScore(obstacle, idx);
+        //   });
+        this.dementor.drawObstacle(); 
+        this.dementor.moveObstacle();
+
         // this.harry.animation();
 
         if (this.gameFrame % 20 === 0){
@@ -47,6 +59,8 @@ class Game {
         }
 
         this.gameFrame++; 
+
+        
 
 
         // document.addEventListener('keydown', (event) => {
