@@ -27,7 +27,7 @@ class Character {
         this.context.drawImage(this.playerRunRight, this.sx * this.sWidth, this.sy * this.sHeight, this.sWidth, this.sHeight, this.playerX, this.playerY, canvas.width/10, canvas.height/10 );
     }
 
-    move(){
+    move = () => {
         document.addEventListener("keydown", (event) => {
             // console.log(event.code);
         

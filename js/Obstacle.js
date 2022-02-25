@@ -1,8 +1,8 @@
 class Obstacle {
     constructor(context) {
       this.context = context; 
-      this.dementor = new Image(); 
-      this.dementor.src = './images/dementor.png';
+      this.obstacle = new Image(); 
+      this.obstacle.src = './images/dementor.png';
       this.x = 1280;  
       this.y = Math.random() * canvas.height; 
       this.width = 140, 
@@ -10,11 +10,11 @@ class Obstacle {
        
     }
   
-    drawObstacle() {
-        this.context.drawImage(this.dementor,this.x,this.y,this.width,this.height)
+    drawObstacle = () => {
+        this.context.drawImage(this.obstacle,this.x,this.y,this.width,this.height)
     }
 
-    moveObstacle(){
+    moveObstacle = () => {
         this.x -= 10;
     }
   

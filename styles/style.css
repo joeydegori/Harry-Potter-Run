@@ -12,6 +12,8 @@
       position: absolute;
       left: 30%; 
       top: 40%; 
+      padding: 5px 10px; 
+      margin: 10px 10px 10px 10px; 
   }
 
   html, body {
