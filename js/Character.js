@@ -4,8 +4,8 @@ class Character {
         this.gameFrame = 0; 
         this.playerFrame = 0; 
         this.playerState = 'running'; 
-        this.playerX = 0; 
-        this.playerY = canvas.height - 900; 
+        this.playerX = 20; 
+        this.playerY = canvas.height - 200; 
         this.playerIdle = new Image();
         this.playerIdle.src = './images/idle.png'
         this.playerRunRight = new Image(); 
@@ -24,11 +24,13 @@ class Character {
         // const drawCharacter = () => {
         //     this.context.drawImage(this.playerRunRight, this.playerX, this.playerY, canvas.width, canvas.height)
         // }
+        // this.context.drawImage(this.playerRunRight, this.sx, this.sy, this.sWidth, this.sHeight); 
         this.context.drawImage(this.playerRunRight, this.sx * this.sWidth, this.sy * this.sHeight, this.sWidth, this.sHeight, this.playerX, this.playerY, canvas.width/10, canvas.height/10 );
     }
 
     move = () => {
         document.addEventListener("keydown", (event) => {
+            event.preventDefault()
             // console.log(event.code);
         
             switch(event.code){
@@ -43,11 +45,11 @@ class Character {
                     break; 
                 case "ArrowUp":
                 case "KeyW":
-                    this.playerY -= 0.11;
+                    this.playerY -= 0.10;
                     break;
                 case "ArrowDown":
                 case "KeyS":    
-                    this.playerY += 0.11;
+                    this.playerY += 0.10;
                     break;
                 default:
                     console.log("You are not using arrow keys!");

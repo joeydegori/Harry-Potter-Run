@@ -5,8 +5,8 @@ class Obstacle {
       this.obstacle.src = './images/dementor.png';
       this.x = 1280;  
       this.y = Math.random() * canvas.height; 
-      this.width = 140, 
-      this.height = 140; 
+      this.width = 100, 
+      this.height = 100; 
        
     }
   
@@ -15,7 +15,7 @@ class Obstacle {
     }
 
     moveObstacle = () => {
-        this.x -= 10;
+        this.x -= 7;
     }
   
 

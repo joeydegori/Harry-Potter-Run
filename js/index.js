@@ -10,7 +10,7 @@ window.onload = () => {
       const game = new Game(context)
       game.drawEverything(); 
     
-      document.getElementById('start-button').style.display = 'none'; 
+      // document.getElementById('start-button').style.display = 'none'; 
       //display:none to start-button 
         // document.addEventListener('keydown', event => {
         //       game.character.controls(event.code)
