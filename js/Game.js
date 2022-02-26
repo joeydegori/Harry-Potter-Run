@@ -14,6 +14,7 @@ class Game {
 
     }
 
+
     createObstacle = () => {
         this.obstacles.push(new Obstacle(this.context));
       };
@@ -41,8 +42,7 @@ class Game {
             obstacle.x + obstacle.width > this.harry.sx &&
             this.harry.sy + this.harry.sHeight > obstacle.y && 
             obstacle.y + obstacle.height > this.harry.sy
-        ) 
-        {
+        ) {
             this.obstacles.splice(index, 1); 
             cancelAnimationFrame(animation); 
             this.context.fillStyle = 'black'; 
@@ -51,6 +51,8 @@ class Game {
             this.context.fillText(`Game Over!!`, 30, canvas.height /2); 
         }
         }
+
+    // handleScore = (obstacle, index)
 
     drawBackground = () => {
     this.context.clearRect(0, 0, canvas.width, canvas.height);
@@ -73,6 +75,7 @@ class Game {
 
     drawEverything = () => {
         //frame
+        
         let animation = requestAnimationFrame(this.drawEverything);
         this.drawBackground();
         this.harry.drawSprite(); 
@@ -83,9 +86,10 @@ class Game {
             obstacle.moveObstacle();
             this.checkCollision(obstacle, index, animation); 
             // this.handleScore(obstacle, index); 
-         })   
+         }); 
+
         this.gameFrame++; 
-        if (this.gameFrame % 50 === 0) this.createObstacle();
+        if (this.gameFrame % 100 === 0) this.createObstacle();
 
         // this.harry.animation();
 
