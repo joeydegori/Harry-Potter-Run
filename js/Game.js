@@ -87,7 +87,7 @@ handleScore = (obstacle, index) => {
 
     if (this.gameFrame % 20 === 0) {
       this.playerFrame++;
-      this.harry.sx = this.playerFrame % 6;
+      this.harry.sx = this.playerFrame % 4;
       this.harry.sy = Math.floor((this.playerFrame / 6) % 1);
     }
   };
