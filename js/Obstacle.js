@@ -7,9 +7,8 @@ class Obstacle {
       this.y = Math.random() * canvas.height; 
       this.width = 100, 
       this.height = 100; 
-       
     }
-  
+
     drawObstacle = () => {
         this.context.drawImage(this.obstacle,this.x,this.y,this.width,this.height)
     }

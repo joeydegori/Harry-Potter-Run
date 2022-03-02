@@ -28,21 +28,20 @@ class Character {
         this.context.drawImage(this.playerRunRight, this.sx * this.sWidth, this.sy * this.sHeight, this.sWidth, this.sHeight, this.playerX, this.playerY, canvas.width/10, canvas.height/10 );
     }
 
+
     move = () => {
         document.addEventListener("keydown", (event) => {
             event.preventDefault()
-            // console.log(event.code);
-        
+
             switch(event.code){
-         
-                case "ArrowRight":
-                case "KeyD":
-                    this.playerX += 0.10;
-                    break;
-                case "ArrowLeft":
-                case "KeyD":
-                    this.playerX -= 0.10; 
-                    break; 
+                // case "ArrowRight":
+                // case "KeyD":
+                //     this.playerX += 0.10;
+                //     break;
+                // case "ArrowLeft":
+                // case "KeyD":
+                //     this.playerX -= 0.10; 
+                //     break; 
                 case "ArrowUp":
                 case "KeyW":
                     this.playerY -= 0.10;
@@ -63,32 +62,6 @@ class Character {
 
 
 
-
-
-
-
-
-
-
-
-
-
-    // animation = () => {
-    //     // this.context.clearRect(0, 0, canvas.width, canvas.height); 
-    //     this.drawSprite(); 
-
-    //     if (this.gameFrame % 10 === 0){
-    //         this.sx+= this.sWidth
-    //     }
-
-    // //     if (this.gameFrame % 10 === 0){
-    // //         this.playerFrame++
-    // //         this.sx = this.playerFrame % 6;
-    // //         this.sy = Math.floor((this.playerFram / 6 ) % 6)
-    // //     }
-    //     this.gameFrame++ 
-    //     requestAnimationFrame(this.animation); 
-    // }
 
 
    
