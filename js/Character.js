@@ -44,11 +44,11 @@ class Character {
                 //     break; 
                 case "ArrowUp":
                 case "KeyW":
-                    this.playerY -= .1;
+                    if(this.playerY > 0)this.playerY -= .1;
                     break;
                 case "ArrowDown":
                 case "KeyS":    
-                    this.playerY += .1;
+                    if(this.playerY < 440)this.playerY += .1;
                     break;
                 default:
                     console.log("You are not using arrow keys!");
