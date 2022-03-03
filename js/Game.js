@@ -80,7 +80,7 @@ handleScore = (obstacle, index) => {
     });
 
     this.gameFrame++;
-    if (this.gameFrame % 50 === 0) this.createObstacle();
+    if (this.gameFrame % 100 === 0) this.createObstacle();
     this.context.fillStyle = 'White';
     this.context.font = '30px Harry Potter', 'sans serif';
     this.context.fillText(`Score: ${this.score}`, 260, 50);
